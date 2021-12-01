@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import universities from './universities';
-import countries from './countries';
+import place from './postalcode';
 
 const rootReducer = combineReducers({
-  universities: universities,
-  countries: countries
+  place: place
 });
 
 export default rootReducer;

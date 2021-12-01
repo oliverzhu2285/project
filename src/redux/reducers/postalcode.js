@@ -1,25 +1,25 @@
 import * as type from '../types';
 
 const initialState = {
-  countries: [],
+  place: null,
   loading: false
 }
 
-export default function countries(state = initialState, action) {
+export default function postalcode(state = initialState, action) {
   switch (action.type) {
-    case type.GET_CONTRIES_REQUESTED:
+    case type.GET_PLACE_REQUESTED:
       return {
         ...state,
-        countries: [],
+        place: null,
         loading: true,
       }
-    case type.CONTRIES_SUCCESS:
+    case type.PLACE_SUCCESS:
       return {
         ...state,
         loading: false,
-        countries: action.countries,
+        place: action.place,
       }
-    case type.CONTRIES_FAILED:
+    case type.PLACE_FAILED:
       return {
         ...state,
         loading: false,
