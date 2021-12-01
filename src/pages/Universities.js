@@ -122,9 +122,9 @@ export default function Universities() {
               >
                 <MenuItem value={'select'}>Select</MenuItem>
                 {
-                  countriesList&&countriesList.sort().map((item, index) =>{
+                  countriesList&&Object.keys(countriesList).map((item, index) =>{
                     return (
-                      <MenuItem value={item} key={index}>{item}</MenuItem>
+                      <MenuItem value={countriesList[item]} key={index}>{countriesList[item]}</MenuItem>
                     );
                   })
                 }
